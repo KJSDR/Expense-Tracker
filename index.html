@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Income Input -->
+        <div>
+            <h2>Enter Your Income</h2>
+            <input type="number" id="monthly-income" placeholder="Enter monthly income" oninput="updateIncome()">
+        </div>
+
+        <!-- Budget Allocation (Based on Income) -->
+        <div>
+            <h2>Allocate Your Income</h2>
+            <div>
+                <label>Food: </label>
+                <input type="number" id="food-allocation" placeholder="Allocate for food" oninput="updateIncome()">
+            </div>
+            <div>
+                <label>Entertainment: </label>
+                <input type="number" id="entertainment-allocation" placeholder="Allocate for entertainment" oninput="updateIncome()">
+            </div>
+            <div>
+                <label>Transportation: </label>
+                <input type="number" id="transportation-allocation" placeholder="Allocate for transportation" oninput="updateIncome()">
+            </div>
+        </div>
