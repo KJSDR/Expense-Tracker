@@ -21,82 +21,28 @@
                                 <label for="monthly-income" class="form-label">Monthly Income</label>
                                 <input type="number" id="monthly-income" class="form-control" placeholder="Enter your income" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="food-allocation" class="form-label">Food Allocation</label>
-                                <input type="number" id="food-allocation" class="form-control" placeholder="Enter food allocation" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="entertainment-allocation" class="form-label">Entertainment Allocation</label>
-                                <input type="number" id="entertainment-allocation" class="form-control" placeholder="Enter entertainment allocation" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="transportation-allocation" class="form-label">Transportation Allocation</label>
-                                <input type="number" id="transportation-allocation" class="form-control" placeholder="Enter transportation allocation" required>
-                            </div>
-                            <button type="button" class="btn btn-primary" onclick="updateIncome()">Save Income & Budget</button>
+                            <button type="button" class="btn btn-primary" onclick="updateIncome()">Save Income</button>
                         </form>
                     </div>
                 </div>
+                <h5 class="mt-4">Add Categories</h5>
+                <button class="btn btn-secondary" onclick="addCategory()">Add New Category</button>
+                <div id="dynamic-categories"></div>
             </div>
 
             <div class="col-md-6">
-                <h1 class="mb-4">Add Expense</h1>
-                <div class="card">
-                    <div class="card-body">
-                        <form id="expense-form">
-                            <div class="mb-3">
-                                <label for="expense-amount" class="form-label">Amount</label>
-                                <input type="number" id="expense-amount" class="form-control" placeholder="Enter expense amount" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="expense-category" class="form-label">Category</label>
-                                <select id="expense-category" class="form-select" required>
-                                    <option value="">Select Category</option>
-                                    <option value="food">Food</option>
-                                    <option value="entertainment">Entertainment</option>
-                                    <option value="transportation">Transportation</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="expense-description" class="form-label">Description</label>
-                                <input type="text" id="expense-description" class="form-control" placeholder="Enter expense description">
-                            </div>
-                            <button type="button" class="btn btn-success" onclick="addExpense()">Add Expense</button>
-                        </form>
-                    </div>
-                </div>
-
-                <h2 class="mt-4">Expense List</h2>
-                <ul id="expense-list" class="list-group">
-                    <!-- List of expenses will appear here -->
+                <h2 class="mb-4">Budget Summary</h2>
+                <ul id="budget-summary" class="list-group">
+                    <!-- Budget summary will appear here -->
                 </ul>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <h2>Budget Summary</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Food: $<span id="food-summary">0.00</span> / $<span id="food-allocated">0.00</span></li>
-                    <li class="list-group-item">Entertainment: $<span id="entertainment-summary">0.00</span> / $<span id="entertainment-allocated">0.00</span></li>
-                    <li class="list-group-item">Transportation: $<span id="transportation-summary">0.00</span> / $<span id="transportation-allocated">0.00</span></li>
+                <ul class="list-group mt-4">
                     <li class="list-group-item">Remaining Income: $<span id="remaining-income-amount">0.00</span></li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h2>Advice</h2>
-                <ul id="advice-list" class="list-group">
-                    <!-- Budget advice will appear here -->
-                </ul>
-            </div>
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-6">
-                <h2>Expense Chart</h2>
-                <canvas id="expense-chart"></canvas>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h2>Income Allocation</h2>
                 <canvas id="income-allocation-chart"></canvas>
             </div>
@@ -107,4 +53,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
