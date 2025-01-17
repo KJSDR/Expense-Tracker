@@ -56,8 +56,11 @@ ul li {
 
 canvas {
     margin-top: 20px;
-    width: 100% !important;
-    max-width: 600px;
-    height: auto;
+    width: 300px !important; /* Adjust the width */
+    height: 300px !important; /* Adjust the height */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
